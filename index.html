@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nightmare Profile</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 15px;
+            position: relative;
+            width: 350px;
+            filter: blur(10px);
+            transition: filter 0.5s;
+        }
+        .container img.profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        .container h1 {
+            color: #8A2BE2;
+            font-size: 3em;
+            text-shadow: 0 0 10px #8A2BE2, 0 0 20px #8A2BE2, 0 0 30px #8A2BE2, 0 0 40px #8A2BE2, 0 0 50px #8A2BE2;
+            animation: sparkle 2s infinite;
+        }
+        @keyframes sparkle {
+            0%, 100% { text-shadow: 0 0 10px #8A2BE2, 0 0 20px #8A2BE2, 0 0 30px #8A2BE2, 0 0 40px #8A2BE2, 0 0 50px #8A2BE2; }
+            50% { text-shadow: 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff, 0 0 50px #ffffff, 0 0 60px #ffffff; }
+        }
+        .container p {
+            font-size: 1.2em;
+        }
+        .username {
+            background: rgba(255, 0, 0, 0.8);
+            padding: 10px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .username img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            vertical-align: middle;
+        }
+        .username span {
+            vertical-align: middle;
+            margin-left: 10px;
+            font-size: 1.2em;
+            color: #8A2BE2;
+        }
+        .icons {
+            margin-top: 15px;
+        }
+        .icons img {
+            width: 40px;
+            height: 40px;
+            margin: 0 5px;
+        }
+        .snowflake {
+            position: absolute;
+            top: 0;
+            color: white;
+            font-size: 1.5em;
+            user-select: none;
+            z-index: 1000;
+            pointer-events: none;
+        }
+        @keyframes fall {
+            0% { top: -10%; }
+            100% { top: 110%; }
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay" id="overlay">
+        <h2>Click anywhere to start</h2>
+    </div>
+    <div class="container" id="container">
+        <img src="https://cdn.discordapp.com/attachments/1246893430492237844/1249157305828638750/download_2.jpeg?ex=666647e5&is=6664f665&hm=59a30fd61d1c7c8c92cdcadd4e987835adf4366f948c3961ffa2d2115c051aea&" class="profile-pic" alt="Nightmare Profile Picture">
+                <h1>Nightmare</h1>
+                <p>Developer business owner and yeah thanks for checking my profile ig? I'm a music producer developer broke 14yr lol</p>
+                <div class="username">
+                    <img src="https://cdn.discordapp.com/attachments/1246893430492237844/1249157305828638750/download_2.jpeg?ex=666647e5&is=6664f665&hm=59a30fd61d1c7c8c92cdcadd4e987835adf4366f948c3961ffa2d2115c051aea&" alt="Nightmare Username Picture">
+                    <span>nightmare_urs8</span>
+                </div>
+                <div class="icons">
+                    <img src="https://img.icons8.com/ios-filled/50/ffffff/internet.png" alt="Website Icon">
+                    <img src="https://img.icons8.com/ios-filled/50/ffffff/discord.png" alt="Game Icon">
+                    <img src="https://img.icons8.com/ios-filled/50/ffffff/spotify.png" alt="Spotify Icon">
+                    <img src="https://img.icons8.com/ios-filled/50/ffffff/twitch.png" alt="Twitch Icon">
+                </div>
+                <div id="snowflakes"></div>
+                <audio id="audio" src="chinatown.mp3" loop></audio>
+            </div>
+            <script>
+                document.getElementById('overlay').addEventListener('click', function() {
+                    // Remove the overlay and play the audio
+                    this.style.display = 'none';
+                    document.getElementById('container').style.filter = 'none';
+                    document.getElementById('audio').play();
+                });
+
+                const numberOfSnowflakes = 20;
+                const snowflakes = document.getElementById('snowflakes');
+
+                for (let i = 0; i < numberOfSnowflakes; i++) {
+                    const snowflake = document.createElement('div');
+                    snowflake.classList.add('snowflake');
+                    snowflake.style.left = Math.random() * 100 + 'vw';
+                    snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
+                    snowflake.innerHTML = '❄';
+                    snowflakes.appendChild(snowflake);
+                }
+
+                document.querySelectorAll('.snowflake').forEach(snowflake => {
+                    snowflake.style.animation = `fall ${Math.random() * 10 + 5}s linear infinite`;
+                });
+            </script>
+        </body>
+        </html>
