@@ -109,148 +109,8 @@
             z-index: 999;
             cursor: pointer;
         }
-    </style>
-</head>
-<body>
-    <div class="overlay" id="overlay">
-        <h2>Click anywhere to enter the Realm</h2>
-    </div>
-    <div class="container" id="container">
-        <img src="https://media.discordapp.net/attachments/1269329670386487329/1271046473810841652/download.png?ex=66b5e9c6&is=66b49846&hm=dd2b1482b6a8fcb43e921aa71b74efde173300a078cd0796c3d4bfe7080a371f&=&format=webp&quality=lossless" class="profile-pic" alt="Nightmare Profile Picture">
-        <h1>Nightmare</h1>
-        <p>wsp im a dev owner of s4 hosting im 14 i play football and yh!</p>
-        <div class="username">
-            <img src="https://media.discordapp.net/attachments/1269329670386487329/1271046473810841652/download.png?ex=66b5e9c6&is=66b49846&hm=dd2b1482b6a8fcb43e921aa71b74efde173300a078cd0796c3d4bfe7080a371f&=&format=webp&quality=lossless" alt="Nightmare Username Picture">
-            <span>nightmare_urs8</span>
-        </div>
-        <div class="icons">
-            <a href="https://s4hosting.xyz"><img src="https://img.icons8.com/ios-filled/50/ffffff/internet.png" alt="Website Icon"></a>
-            <a href="https://discord.gg/RuZSpgNtx7"><img src="https://img.icons8.com/ios-filled/50/ffffff/discord.png" alt="Discord Icon"></a>
-            <a href="https://spotify.com"><img src="https://img.icons8.com/ios-filled/50/ffffff/spotify.png" alt="Spotify Icon"></a>
-            <a href="https://twitter.com"><img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter Icon"></a>
-        </div>
-        <audio id="audio" src="SpotifyMate.com - Watch This - ARIZONATEARS Pluggnb Remix - Lil Uzi Vert.mp3" loop></audio>
-    </div>
-    <script>
-        document.getElementById('overlay').addEventListener('click', function() {
-            // Remove the overlay and play the audio
-            this.style.display = 'none';
-            document.getElementById('container').style.filter = 'none';
-            document.getElementById('audio').play();
-        });
-    </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neon Summer Cybernetic Realm</title>
-    <style>
-        body {
-            background: linear-gradient(135deg, #ffca00, #00c3ff);
-            color: #ffffff;
-            font-family: 'Roboto', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            overflow: hidden;
-        }
-        .container {
-            text-align: center;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 20px;
-            border-radius: 15px;
-            position: relative;
-            width: 350px;
-            filter: drop-shadow(0 0 10px #00ffff);
-            transition: filter 0.5s;
-        }
-        .container:hover {
-            filter: drop-shadow(0 0 15px #ffffff);
-        }
-        .container img.profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 5px solid #00ffff;
-            box-shadow: 0 0 20px #00ffff;
-            transition: transform 0.3s ease-in-out;
-        }
-        .container img.profile-pic:hover {
-            transform: scale(1.1);
-        }
-        .container h1 {
-            color: #00ffff;
-            font-size: 3em;
-            text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff, 0 0 50px #00ffff;
-            animation: sparkle 2s infinite;
-            margin-top: 15px;
-        }
-        @keyframes sparkle {
-            0%, 100% { text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff, 0 0 50px #00ffff; }
-            50% { text-shadow: 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff, 0 0 50px #ffffff, 0 0 60px #ffffff; }
-        }
-        .container p {
-            font-size: 1.2em;
-            margin-top: 15px;
-        }
-        .username {
-            background: rgba(0, 0, 0, 0.8);
-            padding: 10px;
-            border-radius: 10px;
-            display: inline-block;
-            margin-top: 10px;
-            box-shadow: 0 0 15px #00ffff;
-            transition: box-shadow 0.3s ease-in-out;
-        }
-        .username:hover {
-            box-shadow: 0 0 20px #ffffff;
-        }
-        .username img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            vertical-align: middle;
-        }
-        .username span {
-            vertical-align: middle;
-            margin-left: 10px;
-            font-size: 1.2em;
-            color: #000; /* Changed to black */
-        }
-        .icons {
-            margin-top: 15px;
-        }
-        .icons a {
-            text-decoration: none;
-        }
-        .icons img {
-            width: 40px;
-            height: 40px;
-            margin: 0 5px;
-            filter: drop-shadow(0 0 5px #00ffff);
-            transition: transform 0.3s ease-in-out;
-        }
-        .icons img:hover {
-            transform: scale(1.1);
-        }
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 999;
-            cursor: pointer;
+        .overlay h2 {
+            font-size: 1.5em;
         }
     </style>
 </head>
@@ -261,7 +121,7 @@
     <div class="container" id="container">
         <img src="https://media.discordapp.net/attachments/1269329670386487329/1271046473810841652/download.png?ex=66b5e9c6&is=66b49846&hm=dd2b1482b6a8fcb43e921aa71b74efde173300a078cd0796c3d4bfe7080a371f&=&format=webp&quality=lossless" class="profile-pic" alt="Nightmare Profile Picture">
         <h1>Nightmare</h1>
-        <p>wsp im a dev/owner of Guilds im 15 i play football and yh</p>
+        <p>wsp im a dev owner of guilds im 15 i play football and yh!</p>
         <div class="username">
             <img src="https://media.discordapp.net/attachments/1269329670386487329/1271046473810841652/download.png?ex=66b5e9c6&is=66b49846&hm=dd2b1482b6a8fcb43e921aa71b74efde173300a078cd0796c3d4bfe7080a371f&=&format=webp&quality=lossless" alt="Nightmare Username Picture">
             <span>nightmare_urs8</span>
